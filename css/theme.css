@@ -36,6 +36,15 @@ button:not([disabled]):hover {
     background: #369;
 }
 
+.switch-2:checked::before {
+    background: #369;
+    border-color: #369;
+}
+
+.switch-2:checked::after {
+    background: #fff;
+}
+
 /* ==========================================================================
    Typography
    ========================================================================== */

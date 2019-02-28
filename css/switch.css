@@ -84,16 +84,19 @@
     margin-left: calc(100% - 1.75rem);
 }
 
+
+
 .switch-2 {
+    --switch-padding: 0.5rem;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
 
-    padding: 0.5rem;
+    padding: var(--switch-padding);
     width: 4rem;
     height: 2.5rem; 
-    border: 1px solid #ccc;
+    border: 0.0625rem solid #ccc;
     position: relative;
 }
 
@@ -102,13 +105,15 @@
     content: '';
     display: block;
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem; 
+    top: var(--switch-padding);
+    right: var(--switch-padding);
+    bottom: var(--switch-padding);
+    left: var(--switch-padding); 
    
     border: 0.0625rem solid #000;  
     border-radius: 100rem;    
+
+    transition: all .3s;
 }
 
 .switch-2::after {
@@ -117,20 +122,29 @@
     position: absolute;
 
     width: 1rem;
-    height: 1rem;
-    margin-top: 0.1875rem;
     
-    top: 0.5rem;
-    right: 0.75rem;
-    bottom: 0.5rem;
-    left: 0.75rem;
+    margin: 0.1875rem 0;
+    margin-left: calc( var(--switch-padding) * -1.5 );
+    
+    top: var(--switch-padding);
+    right: var(--switch-padding);
+    bottom: var(--switch-padding);
+    left: var(--switch-padding);
+
     
     background-color: #000;
     border-radius: 100rem;
 
+    transform: translateX(100%);
     transition: all .3s;
 }
 
 .switch-2:checked::after{
+    /*
     transform: translateX(calc(100% + 0.375rem));
+    transform: translateX(calc(100%));
+    */
+    left: calc(100%);
+    transform: translateX(-100%);
+    
 }
