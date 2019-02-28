@@ -1,0 +1,51 @@
+.checkbox {
+    display: inline-flex;
+    align-items: flex-start;
+
+    padding: 0.5rem;
+}
+
+.checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    margin: 0 0.625rem 0 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #000;
+}
+
+.checkbox.is-small input {
+    width: 1rem;
+    height: 1rem;
+
+    transform: translateY(0.125rem);
+}
+
+.checkbox.is-large input {
+    width: 2rem;
+    height: 2rem;
+
+    transform: translateY(0.1875rem);
+}
+
+.checkbox input:checked {
+    background-image: url('data:image/svg+xml;utf8,<svg width="9px" height="7px" viewBox="0 0 9 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="%23000000" points="2.89579949 5.12636924 7.08054482 0 8.03810037 0.803484512 2.89579949 6.93184006 0 4.17376854 0.803484512 3.21621299"></polygon></svg>');
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    background-size: 70%;
+}
+
+.checkbox .label {
+
+}
+
+.checkbox.is-small .label {
+    font-size: 0.825rem;
+}
+
+.checkbox.is-large .label {
+    font-size: 1.5rem;
+}

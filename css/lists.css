@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Lists common
+   ========================================================================== */
+
+.action-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ==========================================================================
+   Action list
+   Layout multiple actions or other divided into 1, 2 or 3 sections 
+   ========================================================================== */
+
+.action-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-list > li {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* One button section */
+.action-list > li:first-child:last-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: flex-end;
+}

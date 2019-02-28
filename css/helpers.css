@@ -1,0 +1,28 @@
+.no-style {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+span.no-style, 
+b.no-style 
+i.no-style {
+    display: inline;
+}
+
+img.no-style {
+    display: inline-block;
+}
+
+ul.no-style,
+ol.no-style {
+    display: block;
+    list-style: none;
+}
+
+ul.no-style > li,
+ol.no-style > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}

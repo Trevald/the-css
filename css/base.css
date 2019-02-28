@@ -1,0 +1,34 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    outline-offset: 0.25rem;
+    outline: 0.125rem solid transparent;
+}
+
+*:focus {
+    outline: 0.125rem solid #00C;
+}
+  
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+section:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+
+.container {
+    padding: 1rem;
+    max-width: 980px;
+}

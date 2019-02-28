@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Default
+   ========================================================================== */
+
+.button,
+[class*="button-"],
+button {
+    margin:.25rem;
+    padding: 0.5rem 1rem;
+
+    font-size: 1rem;
+
+    box-shadow: none;
+    border: none;
+    background-color: #ccc;
+}
+
+button.disabled,
+[class*="button-"].disabled,
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================================
+   With icon
+   ========================================================================== */
+
+.button-icon {
+
+}

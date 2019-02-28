@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>The CSS</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/helpers.css">
+  <link rel="stylesheet" href="css/typography.css">
+
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/lists.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/navigation-bar.css">
+  <link rel="stylesheet" href="css/switch.css">
+  <link rel="stylesheet" href="css/topbar.css">
+
+  <link rel="stylesheet" href="css/modifiers.css">
+
+  <link rel="stylesheet" href="css/theme.css" id="theme-css-link">
+</head>
+<body>
+    <header class="navigation-bar is-sticky">
+        <ul>
+            <li style="align-items: center">
+                <label class="switch-container">
+                    <span class="switch-label">Toggle theme</span>
+                    <div class="switch">
+                        <input type="checkbox" id="toggle-theme">
+                        <div class="switch-area">
+                            <div class="switch-paddle"></div>
+                        </div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </header>
+    <form>
+    <div>
+        <div class="container">    
+            <h1>Documentation</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Manifest</h2>
+        <ul>
+            <li>Provide HTML and CSS for custom components</li>
+            <li>Only layout – No design (well, almost no design)</li>
+            <li>No pre-processors</li>
+            <li>No JavaScript (We made some for demo-purposes)</li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h2>Components : Actions and Input</h2>
+    </div>
+
+    <section>
+        <div class="container">
+            <h3>Button</h3>
+
+            <button type="button">Normal</button>
+            <button type="button" disabled>Disabled</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Checkbox</h3>
+            <label class="checkbox is-small">
+                <input type="checkbox">
+                <span class="label">I'm ticky small</span>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="label">I'm ticky medium</span>
+            </label>
+
+            <label class="checkbox is-large">
+                <input type="checkbox">
+                <span class="label">I'm ticky big</span>
+            </label>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Switch</h3>
+            
+            <input type="checkbox" class="switch-2">
+            <br>
+            <input type="checkbox" class="switch-2">
+            
+
+<br><br><br>
+<!--
+            <label class="switch is-small">
+                <input type="checkbox">
+                <div class="switch-area">
+                    <div class="switch-paddle"></div>
+                </div>
+            </label>
+        
+
+
+            
+            <label class="switch is-large">
+                <input type="checkbox">
+                <div class="switch-area">
+                    <div class="switch-paddle"></div>
+                </div>
+            </label>            
+-->
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Components : Content</h2>
+    </div>
+
+    <section>
+        <div class="container">
+            <h3>Modal</h3>
+            <button type="button" data-modal-target="my-modal">Open modal</button>
+
+            <div class="modal" id="my-modal">
+                <div class="modal-box">
+                    <div class="modal-header">
+                        <h4 class="modal-title">My fresh modal</h4>
+                        <button class="modal-close" type="button">Close</button>
+                    </div>
+                    <div class="modal-content">
+                        <p>Some text goes here…</p>
+                    </div>
+                    <div class="modal-footer">
+                        <ul class="action-list">
+                            <li>
+                                <button type="button">Other</button>
+                            </li>
+                            <li>
+                                <a href="#">Another</a>
+                            </li>
+                            <li>
+                                <button type="button">Cancel</button>
+                                <button type="button" class="primary">Ok</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Components : Navigation</h2>
+    </div>
+
+    <section>
+        <div class="container">
+            <h3>Bar</h3>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li class="active"><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Item A</a></li>
+                    <li><a href="#">Item B</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
+</form>
+</body>
+</html>

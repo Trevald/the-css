@@ -1,0 +1,50 @@
+:root {
+    --color-primary: #369;
+    --transition-normal: .3s;
+  }
+
+html {
+    background-color: #f9f9f9;
+}
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+button {
+    border-radius: 100rem;
+    background: var(--color-primary);
+    color: white;
+
+    transition: 
+        all var(--transition-normal);
+}
+
+button:not([disabled]):active {
+
+}
+
+button:not([disabled]):hover {
+    background: var(--color-primary);
+}
+
+/* ==========================================================================
+   Switch
+   ========================================================================== */
+
+.switch-paddle {
+    background: #369;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.note {
+    padding: 0.5rem;
+    background-color: #ffc;
+
+    font-size: 0.825rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
