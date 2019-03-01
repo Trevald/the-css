@@ -1,122 +1,43 @@
-.switch {
-    display: inline-flex;
-    align-items: stretch;
-    position: relative;
-    padding: 0.5rem;
+/* ==========================================================================
+   Switch
+   ========================================================================== */
 
-    height: 2.5rem;
-    width: 4rem;    
+   .switch-container,
+   .switch {
+    --switch-width: 4rem;
+    --switch-height: 2.5rem;
+    --switch-area-increaser: 0.5rem;
+    --switch--border-width: 0.0625rem;
 }
 
-
-.switch input,
-.switch-area {
-    appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -webkit-appearance: none;
-    
-    flex: 1 0 100%;
-    min-width: 100%;
-    padding: 0.0625rem;
-    border: 0.0625rem solid rgba(0,0,0,0.1);
-    border-radius: 100rem;    
-}
-
-.switch-paddle {
-    position: absolute;
-    top: 0.55rem;
-    left: 0.55rem;
-    bottom: 0.55rem;
-    padding-left: 100%;
-
-    background: black;
-    border-radius: 100rem;
-
-    transition: all .3s ease;
-}
-
-.switch input:checked + .switch-area > .switch-paddle {
-    margin-left: calc(100% - 1.25rem);
-}
-
-.switch-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-}
-
-.switch + .switch-label,
-.switch-label + .switch {
-    margin-left: 0.5rem;
-}
-
-/* Small */
-
-.switch.is-small .switch-area {
-    width: 2rem; 
-    height: 1rem;
-}
-
-.switch.is-small .switch-paddle {
-    width: 0.75rem;
-    height: 0.75rem;
-}
-
-.switch.is-small input:checked + .switch-area > .switch-paddle {
-    margin-left: calc(100% - 0.75rem);
-}
-
-/* Large */
-
-.switch.is-large .switch-area {
-    width: 4rem;
-    height: 2rem;    
-}
-
-.switch.is-large .switch-paddle {
-    width: 1.75rem;
-    height: 1.75rem;
-}
-
-.switch.is-large input:checked + .switch-area > .switch-paddle {
-    margin-left: calc(100% - 1.75rem);
-}
-
-
-
-.switch-2 {
-    --switch-padding: 0.5rem;
+.switch {    
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
 
-    padding: var(--switch-padding);
-    width: 4rem;
-    height: 2.5rem; 
-    border: 0.0625rem solid #ccc;
+    padding: var(--switch-area-increaser);
+    width: var(--switch-width);
+    height: var(--switch-height); 
     position: relative;
 }
 
 
-.switch-2::before {
+.switch::before {
     content: '';
     display: block;
     position: absolute;
-    top: var(--switch-padding);
-    right: var(--switch-padding);
-    bottom: var(--switch-padding);
-    left: var(--switch-padding); 
+    top: var(--switch-area-increaser);
+    right: var(--switch-area-increaser);
+    bottom: var(--switch-area-increaser);
+    left: var(--switch-area-increaser); 
    
-    border: 0.0625rem solid #000;  
-    border-radius: 100rem;    
-
+    border: var(--switch--border-width) solid #000;
+      
     transition: all .3s;
 }
 
-.switch-2::after {
+.switch::after {
     content: '';
     display: block;
     position: absolute;
@@ -124,27 +45,45 @@
     width: 1rem;
     
     margin: 0.1875rem 0;
-    margin-left: calc( var(--switch-padding) * -1.5 );
+    margin-left: calc( var(--switch-area-increaser) * -1.5 );
     
-    top: var(--switch-padding);
-    right: var(--switch-padding);
-    bottom: var(--switch-padding);
-    left: var(--switch-padding);
+    top: var(--switch-area-increaser);
+    right: var(--switch-area-increaser);
+    bottom: var(--switch-area-increaser);
+    left: var(--switch-area-increaser);
 
-    
     background-color: #000;
-    border-radius: 100rem;
 
     transform: translateX(100%);
     transition: all .3s;
 }
 
-.switch-2:checked::after{
-    /*
-    transform: translateX(calc(100% + 0.375rem));
-    transform: translateX(calc(100%));
-    */
+.switch:checked::after{
     left: calc(100%);
     transform: translateX(-100%);
-    
+}
+
+
+/* ==========================================================================
+   Switch container
+   ========================================================================== */
+
+.switch-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.switch-container > *:first-child {
+    margin-right: 0.5rem;
+}
+
+
+/* ==========================================================================
+   Switch label
+   ========================================================================== */
+
+.switch-label {
+    padding-top: calc( var(--switch-area-increaser) + var(--switch-border-width) );
+    padding-bottom: var(--switch-area-increaser);
 }

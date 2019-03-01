@@ -32,16 +32,21 @@ button:not([disabled]):hover {
    Switch
    ========================================================================== */
 
-.switch-paddle {
-    background: #369;
+.switch::before {
+    border-radius: 100rem;
 }
 
-.switch-2:checked::before {
+.switch::after {
+    background: #369;
+    border-radius: 100rem;
+}
+
+.switch:checked::before {
     background: #369;
     border-color: #369;
 }
 
-.switch-2:checked::after {
+.switch:checked::after {
     background: #fff;
 }
 
