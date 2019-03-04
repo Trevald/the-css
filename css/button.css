@@ -30,3 +30,24 @@ button[disabled] {
 .button-icon {
 
 }
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+
+.use-theme button {
+    border-radius: var(--make-me-round);
+    background: var(--color-fg-primary);
+    color: var(--color-fg-invert);
+
+    transition: 
+        all var(--transition-normal);
+}
+
+.use-theme button:not([disabled]):active {
+
+}
+
+.use-theme button:not([disabled]):hover {
+    background: var(--color-fg-primary);
+}

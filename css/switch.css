@@ -2,12 +2,31 @@
    Switch
    ========================================================================== */
 
-   .switch-container,
-   .switch {
-    --switch-width: 4rem;
-    --switch-height: 2.5rem;
-    --switch-area-increaser: 0.5rem;
-    --switch--border-width: 0.0625rem;
+.switch-container,
+.switch {
+    --switch-width: 2.75rem;
+    --switch-height: 1.5rem;
+    --switch-area-increaser: 0;
+    --switch-border-width: 0.0625rem;
+    --switch-padding: 0.1875rem;
+    --switch-paddle-width: 
+    calc( var(--switch-height) - var(--switch-padding) * 2 - var(--switch-border-width) * 2);
+}
+
+.switch-container.is-small .switch,
+.switch.is-small {
+    --switch-width: 1.625rem;
+    --switch-height: 1rem;
+}
+
+.switch-container.is-large .switch,
+.switch.is-large {
+    --switch-width: 3.625rem;
+    --switch-height: 2rem;    
+}
+
+.switch-container {
+    padding: 0.5rem;
 }
 
 .switch {    
@@ -15,51 +34,42 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
 
-    padding: var(--switch-area-increaser);
+    padding: var(--switch-padding);
     width: var(--switch-width);
     height: var(--switch-height); 
-    position: relative;
-}
 
+    border: var(--switch-border-width) solid #000;
+    border-radius: var(--make-me-round, 0);
+
+    transition: all var(--transition-normal, .3s);
+}
 
 .switch::before {
     content: '';
     display: block;
-    position: absolute;
-    top: var(--switch-area-increaser);
-    right: var(--switch-area-increaser);
-    bottom: var(--switch-area-increaser);
-    left: var(--switch-area-increaser); 
-   
-    border: var(--switch--border-width) solid #000;
-      
-    transition: all .3s;
+    
+    width: var(--switch-paddle-width);
+    flex: 0 0 var(--switch-paddle-width);
+
+    background: var(--color-fg-primary, black);
+    border-radius: var(--make-me-round, 0);
+
+    transition: all var(--transition-normal, .3s);
 }
 
-.switch::after {
-    content: '';
-    display: block;
-    position: absolute;
-
-    width: 1rem;
-    
-    margin: 0.1875rem 0;
-    margin-left: calc( var(--switch-area-increaser) * -1.5 );
-    
-    top: var(--switch-area-increaser);
-    right: var(--switch-area-increaser);
-    bottom: var(--switch-area-increaser);
-    left: var(--switch-area-increaser);
-
-    background-color: #000;
-
-    transform: translateX(100%);
-    transition: all .3s;
+.switch:checked {
+    background: var(--color-fg-primary, white);
+    border-color: var(--color-fg-primary, black);
 }
 
-.switch:checked::after{
-    left: calc(100%);
+.switch:checked::before {    
+    margin-left: 100%;
+    background: var(--color-fg-invert, black);
     transform: translateX(-100%);
 }
 
@@ -83,7 +93,15 @@
    Switch label
    ========================================================================== */
 
-.switch-label {
+.switch-container > .label {
     padding-top: calc( var(--switch-area-increaser) + var(--switch-border-width) );
     padding-bottom: var(--switch-area-increaser);
+}
+
+.switch-container.is-small > .label {
+    font-size: 0.825rem;
+}
+
+.switch-container.is-large > .label {
+    font-size: 1.5rem;
 }

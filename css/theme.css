@@ -1,60 +1,20 @@
-:root {
-    --color-primary: #369;
+.use-theme {
+    --color-fg-primary: #369;
+    --color-fg-invert: #fff;
     --transition-normal: .3s;
+    --make-me-round: 100rem;
   }
 
-html {
+html.use-theme {
     background-color: #f9f9f9;
 }
 
-/* ==========================================================================
-   Button
-   ========================================================================== */
-
-button {
-    border-radius: 100rem;
-    background: var(--color-primary);
-    color: white;
-
-    transition: 
-        all var(--transition-normal);
-}
-
-button:not([disabled]):active {
-
-}
-
-button:not([disabled]):hover {
-    background: var(--color-primary);
-}
-
-/* ==========================================================================
-   Switch
-   ========================================================================== */
-
-.switch::before {
-    border-radius: 100rem;
-}
-
-.switch::after {
-    background: #369;
-    border-radius: 100rem;
-}
-
-.switch:checked::before {
-    background: #369;
-    border-color: #369;
-}
-
-.switch:checked::after {
-    background: #fff;
-}
 
 /* ==========================================================================
    Typography
    ========================================================================== */
 
-.note {
+.use-theme .note {
     padding: 0.5rem;
     background-color: #ffc;
 

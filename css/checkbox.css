@@ -15,20 +15,26 @@
     width: 1.5rem;
     height: 1.5rem;
     border: 1px solid #000;
+    display: inline-block;
+    font-size: 1px;
+    position: relative;
+
 }
 
 .checkbox.is-small input {
+    
     width: 1rem;
     height: 1rem;
 
-    transform: translateY(0.125rem);
+    /*transform: translateY(0.125rem);*/
 }
 
 .checkbox.is-large input {
+    
     width: 2rem;
     height: 2rem;
 
-    transform: translateY(0.1875rem);
+    /*transform: translateY(0.1875rem);*/
 }
 
 .checkbox input:checked {
@@ -36,10 +42,6 @@
     background-repeat: no-repeat;
     background-position: 60% 50%;
     background-size: 70%;
-}
-
-.checkbox .label {
-
 }
 
 .checkbox.is-small .label {

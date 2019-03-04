@@ -1,4 +1,5 @@
 document.querySelector('#toggle-theme').addEventListener('click', (e) => {
+    // document.querySelector('body').classList.toggle('use-thme');
     let themeCSSLink = document.querySelector('#theme-css-link');
     console.log();
     if (themeCSSLink !== null) {
