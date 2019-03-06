@@ -25,10 +25,6 @@
     --switch-height: 2rem;    
 }
 
-.switch-container {
-    padding: 0.5rem;
-}
-
 .switch {    
     appearance: none;
     -webkit-appearance: none;
@@ -79,9 +75,11 @@
    ========================================================================== */
 
 .switch-container {
-    display: flex;
+    display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    padding: 0.5rem;
 }
 
 .switch-container > *:first-child {

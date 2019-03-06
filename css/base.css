@@ -32,3 +32,25 @@ section:not(:last-child) {
     padding: 1rem;
     max-width: 980px;
 }
+
+figure {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid black;
+}
+
+pre {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1rem;
+    line-height: 2;
+    white-space: pre-wrap;
+}
+
+figure > pre {
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    
+}
