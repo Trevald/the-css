@@ -1,6 +1,11 @@
 {
   "name": "theCSS",
   "version": "0.1.0",
+  "main": "index.html",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Trevald/the-css.git"
+    },
   "devDependencies": {
   }
 }
